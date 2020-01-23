@@ -30,8 +30,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'ACT_DPR_ID',
-            'USR_ID',
-            'DPR_ID',
+            ['label'=>'Usuario',
+            'value'=>$model->uSR->USR_NOMBRE,],
+            ['label'=>'LstDeporte',
+            'value'=>$model->dPR->DPR_TITULO,],
             'ACT_DPR_NOMBRE',
             'ACT_DPR_FECHAINICIO',
         ],

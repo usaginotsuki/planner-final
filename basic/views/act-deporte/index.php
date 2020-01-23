@@ -27,8 +27,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'ACT_DPR_ID',
-            'USR_ID',
-            'DPR_ID',
+            ['label' => 'Usuario',
+            'value' => 'uSR.USR_NOMBRE',],
+            ['label' => 'LstDeporte',
+            'value' => 'dPR.DPR_TITULO',],
             'ACT_DPR_NOMBRE',
             'ACT_DPR_FECHAINICIO',
 

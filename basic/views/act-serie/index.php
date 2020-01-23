@@ -27,8 +27,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'ACT_SER_ID',
-            'USR_ID',
-            'SRS_ID',
+            ['label' => 'Usuario',
+            'value' => 'uSR.USR_NOMBRE',],
+            ['label' => 'LstSerie',
+            'value' => 'sRS.SRS_TITULO',],
             'ACT_SER_NOMBRE',
             'ACT_SER_FECHAINICIO',
 
