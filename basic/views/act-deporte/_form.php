@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use app\models\Usuario; 
+use app\models\LstDeporte; 
+use yii\helpers\ArrayHelper; 
 
 /* @var $this yii\web\View */
 /* @var $model app\models\ActDeporte */
@@ -12,9 +15,11 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'USR_ID')->textInput() ?>
+    <?= $form->field($model, 'USR_ID')->dropDownList(
+        ArrayHelper::map(Usuario::find()->all(),'USR_ID','USR_NOMBRE'),['prompt'=>'Seleccione..']) ?>
 
-    <?= $form->field($model, 'DPR_ID')->textInput() ?>
+    <?= $form->field($model, 'DPR_ID')->dropDownList(
+        ArrayHelper::map(LstDeporte::find()->all(),'DPR_ID','DPR_TITULO'),['prompt'=>'Seleccione..'])  ?>
 
     <?= $form->field($model, 'ACT_DPR_NOMBRE')->textInput(['maxlength' => true]) ?>
 
