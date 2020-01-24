@@ -22,8 +22,30 @@ use Yii;
  * @property ActLectura[] $actLecturas
  * @property ActSerie[] $actSeries
  */
-class Usuario extends \yii\db\ActiveRecord
+class Usuario extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
 {
+
+    public static function isUserAdmin($USR_ID)
+    {
+       if (Usuario::findOne(['USR_ID' => $USR_ID,  'role' => 2])){
+        return true;
+       } else {
+
+        return false;
+       }
+
+    }
+    
+    //funcion para verificar  si es un usuario simple
+    public static function isUserSimple($USR_ID)
+    {
+       if (Usuario::findOne(['USR_ID' => $USR_ID, 'role' => 1])){
+       return true;
+       } else {
+
+       return false;
+       }
+    }
     /**
      * {@inheritdoc}
      */
@@ -96,5 +118,59 @@ class Usuario extends \yii\db\ActiveRecord
     public function getActSeries()
     {
         return $this->hasMany(ActSerie::className(), ['USR_ID' => 'USR_ID']);
+    }
+
+    public function getAuthKey()
+    {
+        return $this->authKey;
+    }
+
+    public function getId()
+    {
+        return $this->USR_ID;
+    }
+
+    public function validateAuthKey($authKey)
+    {
+        return $this->authKey === $authKey;
+    }
+
+    public static function findIdentity($USR_ID)
+    {
+        return static::findOne($USR_ID);
+    }
+
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+        throw new NotSupportedException();
+    }
+
+    public static function findByUsername($username){
+		return self::findOne(['username'=>$username]);
+    }
+    
+    public function validatePassword($password){
+		return $this->password === $password;
+    }
+
+   /* //Despues veo si funciona 
+   public static function isUser($USR_ID){
+
+    }
+
+    public function isAdmin(){
+
+    }*/
+    
+    public function username_existe($attribute, $params)
+    {
+        //Buscar el username en la tabla
+        $table = Usuario::find()->where("username=$username", ["$username" => $this->username]);
+  
+        //Si el username existe mostrar el error
+        if ($table->count() == 1)
+        {
+                $this->addError($attribute, "El usuario seleccionado existe");
+        }
     }
 }
