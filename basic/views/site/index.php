@@ -2,52 +2,90 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Plannr!';
 ?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
 
     <div class="body-content">
 
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+        <div class="container">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+    <div class="jumbotron">
+        <h1>Plannr!</h1>
+            <?php
+            if(Yii::$app->user->isGuest){
+                        print " <p class=\"lead\">Organiza tu tiempo y se mas productivo!!!.</p>\n";
+                print "\n";
+                print "        <p><img src=\"https://cdn.shopify.com/s/files/1/0082/6209/0823/files/IMG_1393_800x.jpg?v=1567216963\" style=\"width:50%;height:50%;\"></p>\n";
+                print "    </div>\n";
+                print "\n";
+                print "    <div class=\"body-content\">\n";
+                print "\n";
+                print "        <div class=\"row\">\n";
+                print "            <div class=\"col-lg-3\">\n";
+                print "                <h2>Lista de lectura</h2>\n";
+                print "\n";
+                print "                <p><ul class=\"list-group\">\n";
+                print "  <li class=\"list-group-item\">Cien años de soledad</li>\n";
+                print "  <li class=\"list-group-item\">Don Quijote de la Mancha</li>\n";
+                print "  <li class=\"list-group-item\">Hamlet</li>\n";
+                print "  <li class=\"list-group-item\">1984</li>\n";
+                print "  <li class=\"list-group-item\">El Principito</li>\n";
+                print "  <li class=\"list-group-item\">...</li>\n";
+                print "\n";
+                print "</ul></p>\n";
+                print "\n";
+                print "              \n";
+                print "            </div>\n";
+                print "            <div class=\"col-lg-3\">\n";
+                print "                <h2>Lista de series</h2>\n";
+                print "\n";
+                print "                <p><ul class=\"list-group\">\n";
+                print "  <li class=\"list-group-item\">Game of Thrones</li>\n";
+                print "  <li class=\"list-group-item\">How I met your mother</li>\n";
+                print "  <li class=\"list-group-item\">Friends</li>\n";
+                print "  <li class=\"list-group-item\">Breaking Bad</li>\n";
+                print "  <li class=\"list-group-item\">Attack On Titan</li>\n";
+                print "\n";
+                print "  <li class=\"list-group-item\">...</li>\n";
+                print "\n";
+                print "</ul> </p>\n";
+                print "            </div>\n";
+                print "            <div class=\"col-lg-3\">\n";
+                print "                <h2>Planeador academico</h2>\n";
+                print "\n";
+                print "                <p><ul class=\"list-group\">\n";
+                print "  <li class=\"list-group-item\">Matematicas</li>\n";
+                print "  <li class=\"list-group-item\">Lengua y Literatura</li>\n";
+                print "  <li class=\"list-group-item\">Ciencias Sociales</li>\n";
+                print "  <li class=\"list-group-item\">Estadistica</li>\n";
+                print "    <li class=\"list-group-item\">Fisica</li>\n";
+                print "\n";
+                print "  <li class=\"list-group-item\">...</li>\n";
+                print "</ul> </p>\n";
+                print "            </div>\n";
+                print "              <div class=\"col-lg-3\">\n";
+                print "                <h2>Lista de deportes</h2>\n";
+                print "<p><ul class=\"list-group\">\n";
+                print "  <li class=\"list-group-item\">Futbol</li>\n";
+                print "  <li class=\"list-group-item\">Basquet</li>\n";
+                print "  <li class=\"list-group-item\">Caminata</li>\n";
+                print "  <li class=\"list-group-item\">Natacion</li>\n";
+                print "    <li class=\"list-group-item\">Atletismo</li>\n";
+                print "\n";
+                print "  <li class=\"list-group-item\">...</li>\n";
+                print "</ul> </p>";
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+               }
+        ?>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+        <?php 
+  if(!Yii::$app->user->isGuest){
+    echo "Estamos trabajando para mejorarlo";
+  }
+ ?>
             </div>
         </div>
 
+       
     </div>
 </div>

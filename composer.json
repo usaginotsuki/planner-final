@@ -1,0 +1,5 @@
+{
+    "require": {
+        "kv4nt/yii2-owl-carousel2": "*"
+    }
+}
