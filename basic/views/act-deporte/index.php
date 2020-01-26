@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\ActDeporteSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Act Deportes';
+$this->title = 'Actividad deportiva';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="act-deporte-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Act Deporte', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create actividad deportiva', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

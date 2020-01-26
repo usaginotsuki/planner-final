@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\ActAcademica */
 
-$this->title = 'Create Act Academica';
+$this->title = 'Crear actividad academica';
 $this->params['breadcrumbs'][] = ['label' => 'Act Academicas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

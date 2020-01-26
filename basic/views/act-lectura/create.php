@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\ActLectura */
 
-$this->title = 'Create Act Lectura';
-$this->params['breadcrumbs'][] = ['label' => 'Act Lecturas', 'url' => ['index']];
+$this->title = 'Create actividad de lectura';
+$this->params['breadcrumbs'][] = ['label' => 'Actividad de Lectura', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="act-lectura-create">

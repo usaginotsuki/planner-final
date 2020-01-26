@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\ActAcademicaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Act Academicas';
+$this->title = 'Actividad Academica';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="act-academica-index">

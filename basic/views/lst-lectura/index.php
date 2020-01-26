@@ -57,7 +57,7 @@ OwlCarouselWidget::begin([
   </div>
 </div>
     
-
+    <br><br>
     <p style="text-align: center">
         <?= Html::a('Crear nueva lectura', ['create'], ['class' => 'btn btn-success']) ?>
     </p>

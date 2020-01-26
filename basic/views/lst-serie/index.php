@@ -13,7 +13,7 @@ use dosamigos\gallery\Gallery;
 /* @var $searchModel app\models\LstSerieSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'lst-serie';
+$this->title = 'Lista de Series';
 
 ?><div>
     
@@ -64,13 +64,11 @@ OwlCarouselWidget::begin([
 
 <div class="lst-serie-index" style="text-align: center">
    
-    <h1><?= Html::encode($this->title) ?></h1>
  
     <p>
         <?= Html::a('Crear nueva serie', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

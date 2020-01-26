@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\ActSerieSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Act Series';
+$this->title = 'Actividad de Series';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="act-serie-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Act Serie', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear actividad de Serie', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

@@ -7,12 +7,11 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\LstAcademicaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Lst Academicas';
+$this->title = 'Lista de tareas Academicas';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="lst-academica-index">
  <h1 style="text-align: center"> Crea nuevas materias </h1><br>
-    <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
         <div class="container">
