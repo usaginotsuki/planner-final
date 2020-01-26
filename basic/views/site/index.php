@@ -1,6 +1,16 @@
 <?php
 
 /* @var $this yii\web\View */
+/* @var $form yii\bootstrap\ActiveForm */
+/* @var $model app\models\LoginForm */
+
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+
+?>
+<?php
+
+/* @var $this yii\web\View */
 
 $this->title = 'Plannr!';
 ?>
@@ -12,8 +22,9 @@ $this->title = 'Plannr!';
     <div class="jumbotron">
         <h1>Plannr!</h1>
             <?php
+         
             if(Yii::$app->user->isGuest){
-                        print " <p class=\"lead\">Organiza tu tiempo y se mas productivo!!!.</p>\n";
+                print " <p class=\"lead\">Organiza tu tiempo y se mas productivo!!!.</p>\n";
                 print "\n";
                 print "        <p><img src=\"https://cdn.shopify.com/s/files/1/0082/6209/0823/files/IMG_1393_800x.jpg?v=1567216963\" style=\"width:50%;height:50%;\"></p>\n";
                 print "    </div>\n";
@@ -76,13 +87,21 @@ $this->title = 'Plannr!';
                 print "</ul> </p>";
 
                }
-        ?>
-
-        <?php 
-  if(!Yii::$app->user->isGuest){
-    echo "Estamos trabajando para mejorarlo";
+      
+            if(!Yii::$app->user->isGuest){
+                echo '<p>Si no encuentras alguna actividad, ayudanos creandola en las listas</p>';
+            echo Html::a('Nueva Serie', ['/act-serie/create'], ['class'=>'btn btn-primary']); 
+            echo '<br>';echo '<br>';
+            echo Html::a('Nuevo Libro', ['/act-lectura/create'], ['class'=>'btn btn-primary']);echo '<br>';echo '<br>';
+            echo Html::a('Nueva tarea academica', ['/act-academica/create'], ['class'=>'btn btn-primary']); echo '<br>';echo '<br>';
+            echo Html::a('Nueva actividad deportiva', ['/act-deportiva/create'], ['class'=>'btn btn-primary']);echo '<br>';
+        
   }
+       
+
  ?>
+     
+
             </div>
         </div>
 
