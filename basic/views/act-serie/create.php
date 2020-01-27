@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\ActSerie */
 
-$this->title = 'Create Act Serie';
+$this->title = 'Crear nueva actividad de serie';
 $this->params['breadcrumbs'][] = ['label' => 'Act Series', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\ActDeporte */
 
-$this->title = 'Create actividad deportiva';
+$this->title = 'Crear actividad deportiva';
 $this->params['breadcrumbs'][] = ['label' => 'Actividad deportiva', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

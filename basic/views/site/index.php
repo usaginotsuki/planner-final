@@ -94,7 +94,7 @@ $this->title = 'Plannr!';
             echo '<br>';echo '<br>';
             echo Html::a('Nuevo Libro', ['/act-lectura/create'], ['class'=>'btn btn-primary']);echo '<br>';echo '<br>';
             echo Html::a('Nueva tarea academica', ['/act-academica/create'], ['class'=>'btn btn-primary']); echo '<br>';echo '<br>';
-            echo Html::a('Nueva actividad deportiva', ['/act-deportiva/create'], ['class'=>'btn btn-primary']);echo '<br>';
+            echo Html::a('Nueva actividad deportiva', ['/act-deporte/create'], ['class'=>'btn btn-primary']);echo '<br>';
         
   }
        
